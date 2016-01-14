@@ -1,12 +1,5 @@
 var fs = require('fs');
 
-function loadFiles(rulesFile, objectFile) {
-    return Promise.all([
-        loadJson(rulesFile),
-        loadJson(objectFile)
-    ]);
-}
-
 function loadJson(filePath) {
 
     return new Promise(function (resolve, reject) {
@@ -29,28 +22,23 @@ function loadJson(filePath) {
     });
 }
 
-function validate(jsons) {
-    var rules = jsons[0];
-    var object = jsons[1];
+function prepareRules(rules) {
 
-    console.log(rules[0]);
-
-    var rulesWithKey = rules.reduce(function (obj, item) {
-        // transform ruleBody to real function
+    return rules.reduce(function (obj, item) {
+        // create function out of ruleBody
         item.ruleBody = new Function(item.ruleBody);
 
         obj[item.id] = item;
 
         return obj;
-    }, {})
-
-    console.log(rulesWithKey[1].ruleBody(object))
-
-    console.log(rulesWithKey);
+    }, {});
 }
 
-function runEngine() {
+function runEngine(objects) {
+    var rules = objects[0];
+    var object = objects[1];
 
+    console.log(objects)
 }
 
 function returnResult() {
@@ -63,13 +51,15 @@ function main() {
     var rulesFile = args[0];
     var objectFile = args[1];
 
-    loadFiles(rulesFile, objectFile)
-        .then(validate)
+    return Promise.all([
+        loadJson(rulesFile).then(prepareRules),
+        loadJson(objectFile)
+    ])
         .then(runEngine)
         .then(returnResult)
         .catch(function (error) {
             console.log(error);
-        });
+        });;
 }
 
 main();
