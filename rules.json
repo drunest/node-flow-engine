@@ -1,0 +1,28 @@
+[{
+  "id": 0,
+  "name": "increment",
+  "ruleBody": "return arguments[0].total += arguments[0].incrementer",
+  "trueId": 1,
+  "falseId": 2
+},
+{
+  "id": 1,
+  "name": "increment",
+  "ruleBody": "return arguments[0].total += arguments[0].incrementer",
+  "trueId": 1,
+  "falseId": 2
+},
+{
+  "id": 2,
+  "name": "increment",
+  "ruleBody": "return arguments[0].total += arguments[0].incrementer",
+  "trueId": 1,
+  "falseId": null
+},
+{
+  "id": 3,
+  "name": "increment",
+  "ruleBody": "return arguments[0].total += arguments[0].incrementer",
+  "trueId": 1,
+  "falseId": 2
+}]
