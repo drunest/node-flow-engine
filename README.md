@@ -1,5 +1,7 @@
 # flow engine
 
+developed on node v5.4.0, uses ES6 syntax
+
 ## install and run
 
 - install dependencies
