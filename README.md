@@ -1,5 +1,7 @@
 # flow engine
 
+## install and run
+
 - install dependencies
 
 ```npm install```
@@ -11,3 +13,15 @@
 or
 
 ```npm start```
+
+- run tests
+
+```npm test```
+
+- also available
+
+```npm run eslint```
+
+## future improvements
+
+- separate engine from rendering results
