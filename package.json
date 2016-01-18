@@ -4,9 +4,18 @@
   "description": "hubrick challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js rules.json object.json"
+    "test": "",
+    "start": "node index.js rules.json object.json",
+    "eslint": "eslint *.js"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "Kris Urbas",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.15.0"
+  }
 }
