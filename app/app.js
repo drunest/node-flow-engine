@@ -3,7 +3,7 @@
 const loader = require('./loader');
 const flowEngine = require('./flow-engine');
 
-const run = () => {
+function run() {
 
     const args = process.argv.slice(2);
     const rulesFile = args[0];
@@ -19,7 +19,7 @@ const run = () => {
         .catch((error) => {
             console.log(error);
         });
-};
+}
 
 module.exports = {
     run: run

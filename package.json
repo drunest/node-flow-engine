@@ -1,7 +1,7 @@
 {
-  "name": "hubrick-challenge",
+  "name": "node-engine-flow",
   "version": "1.0.0",
-  "description": "hubrick challenge",
+  "description": "node-engine-flow",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha **/*.spec.js",

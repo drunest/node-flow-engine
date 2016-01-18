@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-const loadJson = (filePath) => {
+function loadJson(filePath) {
 
     return new Promise((resolve, reject) => {
 
@@ -22,7 +22,7 @@ const loadJson = (filePath) => {
             resolve(jsonAsObject);
         });
     });
-};
+}
 
 module.exports = {
     loadJson: loadJson

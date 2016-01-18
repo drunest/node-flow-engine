@@ -2,7 +2,7 @@
 
 const chalk = require('chalk');
 
-const prepareRules = (rules) => {
+function prepareRules(rules) {
 
     // convert ids to object keys for easier access
     return rules.reduce((obj, item) => {
@@ -13,9 +13,9 @@ const prepareRules = (rules) => {
 
         return obj;
     }, {});
-};
+}
 
-const prepareExecute = (rules, data) => {
+function prepareExecute(rules, data) {
 
     const execute = (rule) => {
         if (typeof rule !== 'object') {
@@ -43,9 +43,9 @@ const prepareExecute = (rules, data) => {
     };
 
     return execute;
-};
+}
 
-const run = (objects) => {
+function run(objects) {
 
     const rules = objects[0];
     const object = objects[1];
@@ -57,7 +57,7 @@ const run = (objects) => {
     if (!execute(firstRule)) {
         console.log('end');
     }
-};
+}
 
 module.exports = {
     prepareRules: prepareRules,
