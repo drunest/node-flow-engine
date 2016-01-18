@@ -4,7 +4,7 @@
   "description": "node-flow-engine",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha **/*.spec.js",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha app/**/*.js specs/**/*.spec.js",
     "start": "node index.js rules.json object.json",
     "eslint": "./node_modules/.bin/eslint **/*.js"
   },

@@ -27,3 +27,5 @@ or
 ## future improvements
 
 - separate engine from rendering results
+- add more unit tests
+- exclude .spec.js from coverage
